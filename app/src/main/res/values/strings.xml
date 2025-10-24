@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DiceRoll</string>
+
+
+    <string name="roll">Roll</string>
+    <string name="add_die">Add Die</string>
+    <string name="remove_die">Remove Die</string>
+
+    <string name="total_format">Total: %1$d</string>
+
+    <string name="max_dice_reached">Max dice reached</string>
+    <string name="cannot_remove_last_die">No dice left to remove.</string>
+</resources>

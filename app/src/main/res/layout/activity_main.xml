@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable container for the dice images -->
+    <HorizontalScrollView
+        android:id="@+id/scrollView_AM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--  THIS IS THE CRITICAL LINE. MAKE SURE THIS ID EXISTS AND IS SPELLED CORRECTLY -->
+        <LinearLayout
+            android:id="@+id/dice_container_AM"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp" />
+
+    </HorizontalScrollView>
+
+    <!-- Make sure this ID is also correct -->
+    <TextView
+        android:id="@+id/roll_total_text_AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/total_format"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView_AM"
+        tools:text="Total: 0" />
+
+
+    <!-- Container for action buttons -->
+    <LinearLayout
+        android:id="@+id/button_bar_AM"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roll_total_text_AM">
+
+        <Button
+            android:id="@+id/button_add_die_AM"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/add_die" />
+
+        <Button
+            android:id="@+id/button_AM"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roll" />
+
+        <Button
+            android:id="@+id/button_remove_die_AM"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/remove_die" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
