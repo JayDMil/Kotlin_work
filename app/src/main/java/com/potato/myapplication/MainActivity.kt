@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addDieMA() {
         if (diceImageViewsMA.size >= 20) {
-            Toast.makeText(this, getString(R.string.max_dice_reached), Toast.LENGTH_SHORT).show() // CHANGED
+            Toast.makeText(this, getString(R.string.max_dice_reached), Toast.LENGTH_SHORT).show()
             return
         }
 
